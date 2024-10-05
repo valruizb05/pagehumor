@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elegir Tema</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
-
 <body>
     <!-- Navbar -->
     <nav>
@@ -30,10 +28,8 @@
     <form action="/ask_topic" method="POST">
         <label for="topic">Tema:</label>
         <input type="text" id="topic" name="topic" required><br>
-        
         <!-- Único botón para buscar el tema -->
         <button type="submit">Buscar tema</button>
     </form>
 </body>
-
 </html>

@@ -36,7 +36,9 @@
                 <img src="{{ url_for('static', filename='img1.jpg') }}" alt="Curso 1" class="course-img">
                 <h3>Texto del curso o tema 1</h3>
                 <!-- Cambia a un enlace que redirija a la ruta de datos personales -->
-                <a href="{{ url_for('personal_data') }}"><button class="course-btn">Botón 1</button></a>
+                <form action="/" method="POST">
+                    <button type="submit" name="button" value="1">Opción 1: Proceso completo</button>
+                </form>
             </div>
             
 
@@ -44,7 +46,9 @@
                 <img src="{{ url_for('static', filename='img2.jpg') }}" alt="Curso 2" class="course-img">
                 <h3>Texto del curso o tema 2</h3>
                 <!-- Cambia a un enlace que redirija directamente al texto humorístico -->
-                <a href="{{ url_for('ask_topic') }}"><button class="course-btn">Botón 2</button></a>
+                <form action="/" method="POST">
+                    <button type="submit" name="button" value="2">Opción 2: Solo texto humorístico</button>
+                </form>
             </div>
         </section>
     </main>

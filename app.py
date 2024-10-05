@@ -19,6 +19,7 @@ if not api_key:
 # Configurar la clave de OpenAI
 openai.api_key = api_key
 
+# Ruta principal
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
@@ -27,12 +28,16 @@ def index():
         # Guardar la opción seleccionada en la sesión
         session['option'] = button_value
 
-        # Redirigir a la página donde se selecciona el tema
-        return redirect(url_for('ask_topic'))
+        # Redirigir según la opción seleccionada
+        if button_value == '1':  # Proceso completo
+            return redirect(url_for('personal_data'))
+        elif button_value == '2':  # Solo texto humorístico
+            return redirect(url_for('ask_topic'))
     
     return render_template('index.html')
 
 
+# Solicitar datos personales (solo para Opción 1)
 @app.route('/personal_data', methods=['GET', 'POST'])
 def personal_data():
     if request.method == 'POST':
@@ -47,19 +52,21 @@ def personal_data():
     
     return render_template('personal_data.html')
 
+
+# Solicitar el tema
 @app.route('/ask_topic', methods=['GET', 'POST'])
 def ask_topic():
     if request.method == 'POST':
         # Obtener el tema ingresado
         topic = request.form.get('topic')
-        button_value = request.form.get('button')  # Identificar qué botón fue presionado
         
         if topic:
             session['topic'] = topic
-            
-            if button_value == '1':  # Botón 1: Proceso completo
-                return redirect(url_for('personal_data'))
-            elif button_value == '2':  # Botón 2: Solo texto humorístico
+
+            # Redirigir según la opción seleccionada en el inicio
+            if session.get('option') == '1':  # Opción 1: Proceso completo
+                return redirect(url_for('show_original_text'))
+            elif session.get('option') == '2':  # Opción 2: Solo texto humorístico
                 return redirect(url_for('show_humor_text'))
         else:
             return "No se ingresó ningún tema", 400  # Devolver un error si no se ingresa tema
@@ -67,6 +74,7 @@ def ask_topic():
     return render_template('ask_topic.html')
 
 
+# Mostrar el texto original (solo para Opción 1)
 @app.route('/show_original_text')
 def show_original_text():
     topic = session.get('topic')
@@ -82,6 +90,7 @@ def show_original_text():
     return render_template('original_text.html', original_text=session['original_text'])
 
 
+# Cuestionario del texto original (solo para Opción 1)
 @app.route('/original_test', methods=['GET', 'POST'])
 def original_test():
     if request.method == 'POST':
@@ -100,6 +109,7 @@ def original_test():
     return render_template('original_test.html', questions=questions)
 
 
+# Mostrar el texto humorístico
 @app.route('/show_humor_text')
 def show_humor_text():
     original_text = session.get('original_text')
@@ -115,6 +125,7 @@ def show_humor_text():
     return render_template('humor_text.html', humor_text=session['humor_text'])
 
 
+# Cuestionario del texto humorístico
 @app.route('/humor_test', methods=['GET', 'POST'])
 def humor_test():
     if request.method == 'POST':
@@ -132,29 +143,57 @@ def humor_test():
     return render_template('humor_test.html', questions=questions)
 
 
+import os
+import pandas as pd
+
 @app.route('/survey', methods=['GET', 'POST'])
 def survey():
     if request.method == 'POST':
         original_percentage = request.form.get('original_percentage')
         humor_percentage = request.form.get('humor_percentage')
         
-        # Guardar los datos en un archivo Excel usando pandas
-        data = {
-            'Name': [session['name']],
-            'Surname': [session['surname']],
-            'Age': [session['age']],
-            'Education': [session['education']],
-            'Original Score': [session['original_score']],
-            'Humor Score': [session['humor_score']],
-            'Original Percentage': [original_percentage],
-            'Humor Percentage': [humor_percentage]
-        }
+        # Determinar el archivo donde guardar los resultados según la opción
+        if session.get('option') == '1':  # Opción 1: Proceso completo
+            # Guardar también los datos personales
+            data = {
+                'Name': [session['name']],
+                'Surname': [session['surname']],
+                'Age': [session['age']],
+                'Education': [session['education']],
+                'Original Score': [session['original_score']],
+                'Humor Score': [session['humor_score']],
+                'Original Percentage': [original_percentage],
+                'Humor Percentage': [humor_percentage]
+            }
+            file_path = 'quiz_results.xlsx'
+        elif session.get('option') == '2':  # Opción 2: Solo texto humorístico
+            # Guardar solo las calificaciones y porcentajes sin datos personales
+            data = {
+                'Humor Score': [session['humor_score']],
+                'Humor Percentage': [humor_percentage]
+            }
+            file_path = 'humor_only_results.xlsx'
+
         df = pd.DataFrame(data)
-        df.to_excel('quiz_results.xlsx', index=False, mode='a', header=False)
+
+        # Crear la carpeta 'data' si no existe
+        if not os.path.exists('data'):
+            os.makedirs('data')
+
+        # Ruta completa para el archivo
+        full_path = os.path.join('data', file_path)
+
+        # Si el archivo existe, cargarlo y agregar los nuevos datos
+        if os.path.exists(full_path):
+            existing_df = pd.read_excel(full_path)
+            df = pd.concat([existing_df, df], ignore_index=True)
+
+        # Guardar los datos en el archivo adecuado
+        df.to_excel(full_path, index=False)
         
         return "¡Gracias por tu participación!"
+    
     return render_template('survey.html')
-
 
 # Ejecutar la aplicación Flask
 if __name__ == '__main__':
