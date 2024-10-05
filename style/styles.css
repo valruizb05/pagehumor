@@ -1,0 +1,99 @@
+/* Estilos básicos para la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h3 {
+    color: #333;
+}
+
+/* Navbar */
+nav {
+    background-color: #f7f7f7;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 150px; /* Cambia según el tamaño de tu logo */
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+/* Sección de bienvenida */
+.welcome-section {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+
+.welcome-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-section p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Sección de cursos/imágenes */
+.courses-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.course-container {
+    text-align: center;
+    width: 300px;
+}
+
+.course-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.course-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #f39c12;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.course-btn:hover {
+    background-color: #e67e22;
+}

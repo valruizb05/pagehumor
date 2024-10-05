@@ -7,9 +7,25 @@
 </head>
 <body>
     <h1>Cuestionario sobre el Texto Original</h1>
-    <form action="/original_quiz" method="POST">
+    <form action="/original_test" method="POST">
         <p>{{ questions }}</p>
         <button type="submit">Continuar a la versión humorística</button>
+    </form>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Texto Educativo</title>
+</head>
+<body>
+    <h1>Introduce un tema</h1>
+    <form action="/process" method="POST">
+        <label for="topic">Tema:</label>
+        <input type="text" id="topic" name="topic" required><br><br>
+        <button type="submit">Generar Texto</button>
     </form>
 </body>
 </html>

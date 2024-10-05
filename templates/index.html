@@ -1,16 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generador de Texto Educativo</title>
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="../style/styles.css">
 </head>
 <body>
-    <h1>Introduce un tema</h1>
-    <form action="/process" method="POST">
-        <label for="topic">Tema:</label>
-        <input type="text" id="topic" name="topic" required><br><br>
-        <button type="submit">Generar Texto</button>
-    </form>
+    <!-- Navbar -->
+    <nav>
+        <div class="navbar-container">
+            <div class="navbar-left">
+                <img src="logo.png" alt="Logo" class="logo">
+            </div>
+            <div class="navbar-right">
+                <ul class="nav-links">
+                    <li><a href="#about">Acerca de</a></li>
+                    <li><a href="#developers">Desarrolladores</a></li>
+                    <li><a href="#history">Antecedentes</a></li>
+                    <li><a href="#related">Temas Relacionados</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Página Principal -->
+    <main>
+        <section class="welcome-section">
+            <h1>Bienvenido</h1>
+            <p>Breve descripción de lo que trata el proyecto, puede incluir detalles sobre su objetivo o funcionamiento.</p>
+        </section>
+
+        <section class="courses-section">
+            <div class="course-container">
+                <img src="img1.png" alt="Curso 1" class="course-img">
+                <h3>Texto del curso o tema 1</h3>
+                <button class="course-btn">Botón 1</button>
+            </div>
+
+            <div class="course-container">
+                <img src="img2.png" alt="Curso 2" class="course-img">
+                <h3>Texto del curso o tema 2</h3>
+                <button class="course-btn">Botón 2</button>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
+
