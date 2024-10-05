@@ -19,6 +19,15 @@ if not api_key:
 # Configurar la clave de OpenAI
 openai.api_key = api_key
 
+@app.after_request
+def add_security_headers(response):
+    response.headers['Content-Security-Policy'] = (
+        "default-src 'self'; "
+        "style-src 'self' 'unsafe-inline' https://www.gstatic.com; "
+        "script-src 'self' 'unsafe-inline';"
+    )
+    return response
+
 # Ruta principal
 @app.route('/', methods=['GET', 'POST'])
 def index():
