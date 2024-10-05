@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página Principal</title>
+        <link rel="stylesheet" href="../style/styles.css">
+    </head>
+    <title>Datos Personales</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar-container">
+            <div class="navbar-left">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+            </div>
+            <div class="navbar-right">
+                <ul class="nav-links">
+                    <li><a href="#about">Acerca de</a></li>
+                    <li><a href="#developers">Desarrolladores</a></li>
+                    <li><a href="#history">Antecedentes</a></li>
+                    <li><a href="#related">Temas Relacionados</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1>Introduce tus datos personales</h1>
+    <form action="/personal_data" method="POST">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="surname">Apellidos:</label>
+        <input type="text" id="surname" name="surname" required><br>
+        <label for="age">Edad:</label>
+        <input type="number" id="age" name="age" required><br>
+        <label for="education">Último grado de estudios:</label>
+        <input type="text" id="education" name="education" required><br>
+        <button type="submit">Continuar</button>
+    </form>
+</body>
+
+</html>

@@ -2,171 +2,159 @@ from flask import Flask, request, render_template, redirect, url_for, session
 import openai
 import os
 from dotenv import load_dotenv
+import pandas as pd
 
 # Cargar las variables de entorno
 load_dotenv()
 
-# Inicializar la aplicación Flask
-app = Flask(__name__)
-app.secret_key = 'supersecretkey'  # Necesario para usar 'session'
+# Inicializar la aplicación Flask y configurar la carpeta de archivos estáticos
+app = Flask(__name__, static_folder='style')
+app.secret_key = 'supersecretkey'
 
 # Obtener la clave desde la variable de entorno
 api_key = os.getenv("OPENAI_API_KEY")
-
-# Verificar si la clave de API se ha cargado correctamente
 if not api_key:
-    raise ValueError("No se encontró la clave de OpenAI. Asegúrate de que está definida en el archivo .env.")
+    raise ValueError("No se encontró la clave de OpenAI.")
 
 # Configurar la clave de OpenAI
 openai.api_key = api_key
 
-# Ruta principal para mostrar el formulario de entrada
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
+    if request.method == 'POST':
+        button_value = request.form.get('button')  # Identificar qué botón fue presionado
+
+        # Guardar la opción seleccionada en la sesión
+        session['option'] = button_value
+
+        # Redirigir a la página donde se selecciona el tema
+        return redirect(url_for('ask_topic'))
+    
     return render_template('index.html')
 
-# Ruta para procesar el tema ingresado y generar texto original
-@app.route('/process', methods=['POST'])
-def process():
-    # Obtener el tema ingresado por el usuario
-    topic = request.form.get('topic')
-    if not topic:
-        return "No se ha ingresado ningún tema."
 
-    # Guardar el tema en la sesión
-    session['topic'] = topic
-
-    # Generar el texto original sobre el tema
-    prompt_text = [
-        {"role": "system", "content": "Eres un experto en educación que debe generar un texto educativo serio sobre el tema que el usuario elija."},
-        {"role": "user", "content": f"Escribe un texto educativo serio sobre el tema: {topic}"}
-    ]
+@app.route('/personal_data', methods=['GET', 'POST'])
+def personal_data():
+    if request.method == 'POST':
+        # Guardar los datos personales en la sesión
+        session['name'] = request.form.get('name')
+        session['surname'] = request.form.get('surname')
+        session['age'] = request.form.get('age')
+        session['education'] = request.form.get('education')
+        
+        # Redirigir a la página donde se selecciona el tema
+        return redirect(url_for('ask_topic'))
     
-    # Llamada a la API para generar el texto educativo original
-    try:
-        response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
-            messages=prompt_text,
-            temperature=0.7,
-            max_tokens=1500
-        )
-        original_text = response['choices'][0]['message']['content']
-        
-        # Guardar el texto original en la sesión
-        session['original_text'] = original_text
-        
-        # Redirigir a la página que muestra el texto original
-        return redirect(url_for('show_original_text'))
+    return render_template('personal_data.html')
 
-    except openai.error.OpenAIError as e:
-        return f"Error en la API de OpenAI: {e}"
-    except Exception as e:
-        return f"Ocurrió un error: {e}"
+@app.route('/ask_topic', methods=['GET', 'POST'])
+def ask_topic():
+    if request.method == 'POST':
+        # Obtener el tema ingresado
+        topic = request.form.get('topic')
+        button_value = request.form.get('button')  # Identificar qué botón fue presionado
+        
+        if topic:
+            session['topic'] = topic
+            
+            if button_value == '1':  # Botón 1: Proceso completo
+                return redirect(url_for('personal_data'))
+            elif button_value == '2':  # Botón 2: Solo texto humorístico
+                return redirect(url_for('show_humor_text'))
+        else:
+            return "No se ingresó ningún tema", 400  # Devolver un error si no se ingresa tema
+    
+    return render_template('ask_topic.html')
 
-# Mostrar el texto original
+
 @app.route('/show_original_text')
 def show_original_text():
-    original_text = session.get('original_text')
-    if not original_text:
-        return redirect(url_for('index'))
-    return render_template('original_text.html', original_text=original_text)
+    topic = session.get('topic')
+    
+    # Generar el texto original basado en el tema
+    prompt_text = [
+        {"role": "system", "content": "Genera un texto educativo serio sobre el siguiente tema."},
+        {"role": "user", "content": f"Escribe un texto educativo serio sobre: {topic}"}
+    ]
+    response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=prompt_text, temperature=0.7, max_tokens=1500)
+    session['original_text'] = response['choices'][0]['message']['content']
+    
+    return render_template('original_text.html', original_text=session['original_text'])
 
-# Ruta para mostrar el cuestionario del texto original
+
 @app.route('/original_test', methods=['GET', 'POST'])
-def original_quiz():
-    original_text = session.get('original_text')
-    if not original_text:
-        return redirect(url_for('index'))
-
+def original_test():
     if request.method == 'POST':
-        # Aquí puedes procesar las respuestas del cuestionario del texto original
-        # Luego, redirigir a la versión humorística
+        # Guardar la calificación del quiz
+        session['original_score'] = request.form.get('score')
         return redirect(url_for('show_humor_text'))
     
-    # Generar preguntas sobre el tema en la versión seria
+    original_text = session.get('original_text')
     prompt_questions = [
-        {"role": "system", "content": "Genera cinco preguntas de opción múltiple sobre el siguiente texto: "},
+        {"role": "system", "content": "Genera cinco preguntas de opción múltiple sobre el siguiente texto."},
         {"role": "user", "content": original_text}
     ]
-    
-    response_questions = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=prompt_questions,
-        temperature=0.7,
-        max_tokens=500
-    )
-    
-    questions = response_questions['choices'][0]['message']['content']
+    response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=prompt_questions, max_tokens=500)
+    questions = response['choices'][0]['message']['content']
     
     return render_template('original_test.html', questions=questions)
 
-# Mostrar el texto humorístico
+
 @app.route('/show_humor_text')
 def show_humor_text():
     original_text = session.get('original_text')
-    if not original_text:
-        return redirect(url_for('index'))
-
-    # Generar la versión humorística del mismo texto
+    
+    # Generar la versión humorística del texto
     prompt_humor = [
-        {"role": "system", "content": "Transforma el siguiente texto en un estilo humorístico adecuado para adolescentes: "},
+        {"role": "system", "content": "Transforma el siguiente texto en un estilo humorístico adecuado para adolescentes."},
         {"role": "user", "content": original_text}
     ]
+    response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=prompt_humor, max_tokens=1500)
+    session['humor_text'] = response['choices'][0]['message']['content']
     
-    response_humor = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=prompt_humor,
-        temperature=0.7,
-        max_tokens=1500
-    )
-    
-    humor_text = response_humor['choices'][0]['message']['content']
-    
-    # Guardar el texto humorístico en la sesión
-    session['humor_text'] = humor_text
+    return render_template('humor_text.html', humor_text=session['humor_text'])
 
-    return render_template('humor_text.html', humor_text=humor_text)
 
-# Ruta para mostrar el cuestionario del texto humorístico
 @app.route('/humor_test', methods=['GET', 'POST'])
 def humor_test():
-    humor_text = session.get('humor_text')
-    if not humor_text:
-        return redirect(url_for('index'))
-
     if request.method == 'POST':
-        # Aquí puedes procesar las respuestas del cuestionario humorístico
-        # Luego, redirigir a la encuesta final
+        session['humor_score'] = request.form.get('score')
         return redirect(url_for('survey'))
     
-    # Generar preguntas sobre el texto humorístico
+    humor_text = session.get('humor_text')
     prompt_questions = [
-        {"role": "system", "content": "Genera cinco preguntas de opción múltiple sobre el siguiente texto: "},
+        {"role": "system", "content": "Genera cinco preguntas de opción múltiple sobre el siguiente texto humorístico."},
         {"role": "user", "content": humor_text}
     ]
-    
-    response_questions = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=prompt_questions,
-        temperature=0.7,
-        max_tokens=500
-    )
-    
-    questions = response_questions['choices'][0]['message']['content']
+    response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=prompt_questions, max_tokens=500)
+    questions = response['choices'][0]['message']['content']
     
     return render_template('humor_test.html', questions=questions)
 
-# Ruta para mostrar la encuesta final de retroalimentación
+
 @app.route('/survey', methods=['GET', 'POST'])
 def survey():
     if request.method == 'POST':
-        # Procesar las respuestas de la encuesta
-        original_rating = request.form.get('original_rating')
-        humor_rating = request.form.get('humor_rating')
-        # Aquí puedes guardar los resultados o procesarlos como necesites
+        original_percentage = request.form.get('original_percentage')
+        humor_percentage = request.form.get('humor_percentage')
+        
+        # Guardar los datos en un archivo Excel usando pandas
+        data = {
+            'Name': [session['name']],
+            'Surname': [session['surname']],
+            'Age': [session['age']],
+            'Education': [session['education']],
+            'Original Score': [session['original_score']],
+            'Humor Score': [session['humor_score']],
+            'Original Percentage': [original_percentage],
+            'Humor Percentage': [humor_percentage]
+        }
+        df = pd.DataFrame(data)
+        df.to_excel('quiz_results.xlsx', index=False, mode='a', header=False)
+        
         return "¡Gracias por tu participación!"
-
     return render_template('survey.html')
+
 
 # Ejecutar la aplicación Flask
 if __name__ == '__main__':

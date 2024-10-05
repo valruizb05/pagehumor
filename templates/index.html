@@ -11,7 +11,7 @@
     <nav>
         <div class="navbar-container">
             <div class="navbar-left">
-                <img src="logo.png" alt="Logo" class="logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
             </div>
             <div class="navbar-right">
                 <ul class="nav-links">
@@ -33,15 +33,18 @@
 
         <section class="courses-section">
             <div class="course-container">
-                <img src="img1.png" alt="Curso 1" class="course-img">
+                <img src="{{ url_for('static', filename='img1.jpg') }}" alt="Curso 1" class="course-img">
                 <h3>Texto del curso o tema 1</h3>
-                <button class="course-btn">Botón 1</button>
+                <!-- Cambia a un enlace que redirija a la ruta de datos personales -->
+                <a href="{{ url_for('personal_data') }}"><button class="course-btn">Botón 1</button></a>
             </div>
+            
 
             <div class="course-container">
-                <img src="img2.png" alt="Curso 2" class="course-img">
+                <img src="{{ url_for('static', filename='img2.jpg') }}" alt="Curso 2" class="course-img">
                 <h3>Texto del curso o tema 2</h3>
-                <button class="course-btn">Botón 2</button>
+                <!-- Cambia a un enlace que redirija directamente al texto humorístico -->
+                <a href="{{ url_for('ask_topic') }}"><button class="course-btn">Botón 2</button></a>
             </div>
         </section>
     </main>
