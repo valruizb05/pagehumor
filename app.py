@@ -72,7 +72,7 @@ def show_original_text():
     return render_template('original_text.html', original_text=original_text)
 
 # Ruta para mostrar el cuestionario del texto original
-@app.route('/original_quiz', methods=['GET', 'POST'])
+@app.route('/original_test', methods=['GET', 'POST'])
 def original_quiz():
     original_text = session.get('original_text')
     if not original_text:
@@ -98,7 +98,7 @@ def original_quiz():
     
     questions = response_questions['choices'][0]['message']['content']
     
-    return render_template('original_quiz.html', questions=questions)
+    return render_template('original_test.html', questions=questions)
 
 # Mostrar el texto humorístico
 @app.route('/show_humor_text')
@@ -128,8 +128,8 @@ def show_humor_text():
     return render_template('humor_text.html', humor_text=humor_text)
 
 # Ruta para mostrar el cuestionario del texto humorístico
-@app.route('/humor_quiz', methods=['GET', 'POST'])
-def humor_quiz():
+@app.route('/humor_test', methods=['GET', 'POST'])
+def humor_test():
     humor_text = session.get('humor_text')
     if not humor_text:
         return redirect(url_for('index'))
@@ -154,7 +154,7 @@ def humor_quiz():
     
     questions = response_questions['choices'][0]['message']['content']
     
-    return render_template('humor_quiz.html', questions=questions)
+    return render_template('humor_test.html', questions=questions)
 
 # Ruta para mostrar la encuesta final de retroalimentación
 @app.route('/survey', methods=['GET', 'POST'])
