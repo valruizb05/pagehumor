@@ -99,7 +99,6 @@ def show_original_text():
     return render_template('original_text.html', original_text=session['original_text'])
 
 
-# Cuestionario del texto original (solo para Opción 1)
 @app.route('/original_test', methods=['GET', 'POST'])
 def original_test():
     if request.method == 'POST':
@@ -112,10 +111,29 @@ def original_test():
         {"role": "system", "content": "Genera cinco preguntas de opción múltiple sobre el siguiente texto."},
         {"role": "user", "content": original_text}
     ]
-    response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=prompt_questions, max_tokens=500)
-    questions = response['choices'][0]['message']['content']
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=prompt_questions,
+        max_tokens=500
+    )
     
-    return render_template('original_test.html', questions=questions)
+    # Procesar el contenido recibido en varias preguntas con opciones
+    raw_questions = response['choices'][0]['message']['content']
+    questions = raw_questions.split("\n\n")  # Divide las preguntas por doble salto de línea
+
+    formatted_questions = []
+    for question in questions:
+        # Extraer la pregunta y las opciones (asumiendo que las opciones empiezan con letras a), b), c)...)
+        lines = question.split("\n")
+        pregunta = lines[0]
+        opciones = lines[1:]  # Extrae las opciones
+        
+        formatted_questions.append({
+            'pregunta': pregunta,
+            'opciones': opciones
+        })
+
+    return render_template('original_test.html', questions=formatted_questions)
 
 
 # Mostrar el texto humorístico
@@ -134,10 +152,10 @@ def show_humor_text():
     return render_template('humor_text.html', humor_text=session['humor_text'])
 
 
-# Cuestionario del texto humorístico
 @app.route('/humor_test', methods=['GET', 'POST'])
 def humor_test():
     if request.method == 'POST':
+        # Guardar la calificación del quiz de humor
         session['humor_score'] = request.form.get('score')
         return redirect(url_for('survey'))
     
@@ -146,14 +164,17 @@ def humor_test():
         {"role": "system", "content": "Genera cinco preguntas de opción múltiple sobre el siguiente texto humorístico."},
         {"role": "user", "content": humor_text}
     ]
-    response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=prompt_questions, max_tokens=500)
-    questions = response['choices'][0]['message']['content']
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=prompt_questions,
+        max_tokens=500
+    )
+    
+    # Convertimos las preguntas en una lista para enviarlas a la plantilla
+    questions = response['choices'][0]['message']['content'].split("\n")
     
     return render_template('humor_test.html', questions=questions)
 
-
-import os
-import pandas as pd
 
 @app.route('/survey', methods=['GET', 'POST'])
 def survey():

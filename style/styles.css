@@ -1,13 +1,14 @@
 /* Estilos básicos para la página */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Monserrat, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-h1, h3 {
-    color: #333;
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #050452 !important; /* Esto fuerza el color */
 }
 
 /* Navbar */
@@ -17,83 +18,149 @@ nav {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Navbar */
 .navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #f0f0f0;  /* Fondo claro para el navbar */
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra solo abajo */
+    position: fixed;  /* Fijar el navbar al tope de la página */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;  /* Asegura que esté por encima del resto del contenido */
 }
 
-.logo {
-    width: 150px; /* Cambia según el tamaño de tu logo */
+.navbar-left img {
+    height: 50px; /* Tamaño original del logo */
+    transform: scale(1.5); /* Escala la imagen al 150% de su tamaño original */
+    transform-origin: left center; /* Mantiene el logo alineado a la izquierda */
+    width: 20vh; 
 }
 
-.nav-links {
-    list-style-type: none;
+.navbar-right ul {
+    list-style: none;
     display: flex;
-    gap: 1.5rem;
+    gap: 20px;
 }
 
-.nav-links li {
-    display: inline;
-}
-
-.nav-links a {
+.navbar-right a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: #f39c12;
+.navbar-right a:hover {
+    background-color: #002366; /* Azul marino similar al logo */
+    color: #fff; /* Texto blanco */
+}
+
+/* Ajustar el contenido principal para que no se superponga con el navbar */
+main {
+    padding-top: 100px;  /* Ajustar el padding superior para evitar que el contenido quede debajo del navbar */
 }
 
 /* Sección de bienvenida */
 .welcome-section {
+    background-color: #ffffff;
+    padding: 20px 30px; /* Reducir padding superior para que suba */
     text-align: center;
-    padding: 2rem;
-    background-color: #f4f4f4;
+    border-radius: 10px;
+    margin-bottom: 30px;
 }
 
 .welcome-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 48px;
+    color: #333;
+    margin-top: 10px; /* Mover el título más arriba */
 }
 
 .welcome-section p {
-    font-size: 1.2rem;
+    font-size: 18px;
     color: #666;
-}
-
-/* Sección de cursos/imágenes */
-.courses-section {
-    display: flex;
-    justify-content: space-around;
-    padding: 2rem;
-    background-color: #fff;
+    margin-top: 5px; /* Mover el párrafo más arriba */
 }
 
 .course-container {
+    width: 30%; /* Ajustar el ancho del contenedor */
+    margin: 0 auto;
     text-align: center;
-    width: 300px;
 }
 
 .course-img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
+    height: 200px; /* Altura más pequeña */
+    object-fit: cover; /* Mantiene las proporciones sin deformar */
+    border-radius: 10px; /* Bordes redondeados opcionales */
 }
 
-.course-btn {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #f39c12;
-    border: none;
+.courses-section {
+    display: flex;
+    justify-content: space-around; /* Espacio igual entre los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    gap: 20px; /* Espacio entre los contenedores */
+}
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+button {
+    position: relative;
+    background-color: #050452; /* Color azul de fondo */
     color: white;
-    font-size: 1rem;
+    padding: 10px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1;
+    transition: background-color 0.4s ease-in-out, transform 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
 }
 
-.course-btn:hover {
-    background-color: #e67e22;
+button .icon {
+    margin-left: 10px;
+    opacity: 0;
+    font-size: 18px;
+    transition: opacity 0.3s ease-in-out;
 }
+
+button:hover {
+    background-color: white; /* Cambia el fondo a blanco al hacer hover */
+    color: #050452; /* Cambia el texto a azul */
+    transform: scale(1.05); /* Agranda el botón ligeramente */
+}
+
+button:hover .icon {
+    opacity: 1; /* Muestra el icono cuando se hace hover */
+}
+
+button:hover::before {
+    background-color: rgba(255, 255, 255, 0.1); /* Añade una pequeña difuminación */
+}
+
+button span {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover span {
+    transform: translateX(5px); /* Mueve ligeramente el texto hacia la derecha */
+}
+
+
+
+
+
+
+
+
+
+
+  

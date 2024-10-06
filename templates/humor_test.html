@@ -8,7 +8,21 @@
 <body>
     <h1>Cuestionario sobre el Texto con Humor</h1>
     <form action="/humor_test" method="POST">
-        <p>{{ questions }}</p>
+        {% for question in questions %}
+            <p>{{ loop.index }}. {{ question }}</p>
+            <label>
+                <input type="radio" name="question_{{ loop.index }}" value="opcion1"> Opción 1
+            </label><br>
+            <label>
+                <input type="radio" name="question_{{ loop.index }}" value="opcion2"> Opción 2
+            </label><br>
+            <label>
+                <input type="radio" name="question_{{ loop.index }}" value="opcion3"> Opción 3
+            </label><br>
+            <label>
+                <input type="radio" name="question_{{ loop.index }}" value="opcion4"> Opción 4
+            </label><br><br>
+        {% endfor %}
         <button type="submit">Continuar a la encuesta</button>
     </form>
 </body>

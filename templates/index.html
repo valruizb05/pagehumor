@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Principal</title>
     <link rel="stylesheet" href="../style/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -28,26 +30,31 @@
     <main>
         <section class="welcome-section">
             <h1>Bienvenido</h1>
-            <p>Breve descripción de lo que trata el proyecto, puede incluir detalles sobre su objetivo o funcionamiento.</p>
+            <p>"La verdadera promesa de la IA es  liberar  el  potencial  humano." -  Satya Nadella (CEO de Microsoft).</p>
         </section>
 
         <section class="courses-section">
             <div class="course-container">
                 <img src="{{ url_for('static', filename='img1.jpg') }}" alt="Curso 1" class="course-img">
-                <h3>Texto del curso o tema 1</h3>
+                <h3>Proceso completo</h3>
                 <!-- Cambia a un enlace que redirija a la ruta de datos personales -->
                 <form action="/" method="POST">
-                    <button type="submit" name="button" value="1">Opción 1: Proceso completo</button>
+                    <button type="submit" name="button" value="1">
+                        <i class="fas fa-arrow-right"></i> Comenzar
+                    </button>                    
                 </form>
             </div>
             
 
             <div class="course-container">
                 <img src="{{ url_for('static', filename='img2.jpg') }}" alt="Curso 2" class="course-img">
-                <h3>Texto del curso o tema 2</h3>
+                <h3>Solo texto humoristíco</h3>
                 <!-- Cambia a un enlace que redirija directamente al texto humorístico -->
                 <form action="/" method="POST">
-                    <button type="submit" name="button" value="2">Opción 2: Solo texto humorístico</button>
+                    <button type="submit" name="button" value="2">
+                        <span>Comenzar</span>
+                        <i class="fas fa-arrow-right icon"></i> <!-- Icono que aparecerá al hacer hover -->
+                    </button>                                    
                 </form>
             </div>
         </section>
