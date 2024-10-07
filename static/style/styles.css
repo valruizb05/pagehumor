@@ -106,11 +106,9 @@ main {
     gap: 20px; /* Espacio entre los contenedores */
 }
 
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
-
-button {
+.button {
     position: relative;
-    background-color: #050452; /* Color azul de fondo */
+    background-color: #050452;
     color: white;
     padding: 10px 30px;
     font-size: 16px;
@@ -119,30 +117,41 @@ button {
     cursor: pointer;
     overflow: hidden;
     z-index: 1;
-    transition: background-color 0.4s ease-in-out, transform 0.3s ease-in-out;
     display: inline-flex;
     align-items: center;
+    transition: all 0.4s ease-in-out;
 }
 
-button .icon {
+.button .icon {
     margin-left: 10px;
     opacity: 0;
     font-size: 18px;
     transition: opacity 0.3s ease-in-out;
 }
 
-button:hover {
-    background-color: white; /* Cambia el fondo a blanco al hacer hover */
-    color: #050452; /* Cambia el texto a azul */
-    transform: scale(1.05); /* Agranda el botón ligeramente */
+.button::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #002366;
+    z-index: -1;
+    transition: top 0.4s ease-in-out;
 }
 
-button:hover .icon {
-    opacity: 1; /* Muestra el icono cuando se hace hover */
+.button:hover::before {
+    top: 0;
 }
 
-button:hover::before {
-    background-color: rgba(255, 255, 255, 0.1); /* Añade una pequeña difuminación */
+.button:hover {
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.button:hover .icon {
+    opacity: 1;
 }
 
 button span {
@@ -151,8 +160,13 @@ button span {
 }
 
 button:hover span {
-    transform: translateX(5px); /* Mueve ligeramente el texto hacia la derecha */
+    transform: translateX(5px);
 }
+
+.button i {
+    margin-right: 8px; /* Ajusta este valor según el espacio que quieras */
+}
+
 
 
 

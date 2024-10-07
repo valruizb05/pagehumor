@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, redirect, url_for, session
+from flask import Flask, request, render_template, redirect, url_for, session, make_response
 import openai
 import os
 from dotenv import load_dotenv
@@ -19,14 +19,18 @@ if not api_key:
 # Configurar la clave de OpenAI
 openai.api_key = api_key
 
+app = Flask(__name__)
+
 @app.after_request
-def add_security_headers(response):
+def apply_csp(response):
     response.headers['Content-Security-Policy'] = (
         "default-src 'self'; "
-        "style-src 'self' 'unsafe-inline' https://www.gstatic.com; "
-        "script-src 'self' 'unsafe-inline';"
+        "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; "
+        "script-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.jsdelivr.net; "
+        "font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com https://cdn.jsdelivr.net"
     )
     return response
+
 
 # Ruta principal
 @app.route('/', methods=['GET', 'POST'])
