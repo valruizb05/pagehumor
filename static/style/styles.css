@@ -23,7 +23,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f0f0f0;  /* Fondo claro para el navbar */
+    background-color: #04133b;  /* Fondo claro para el navbar */
     padding: 15px 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra solo abajo */
     position: fixed;  /* Fijar el navbar al tope de la página */
@@ -48,7 +48,7 @@ nav {
 
 .navbar-right a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
     font-weight: bold;
     padding: 10px 15px;
     border-radius: 5px;
@@ -167,6 +167,253 @@ button:hover span {
     margin-right: 8px; /* Ajusta este valor según el espacio que quieras */
 }
 
+  
+/* Introducción */
+.intro-section {
+    padding: 10px 80px;  /* Reducir el padding superior */
+}
+
+/* Flexbox para alinear imagen y texto */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro-text h2 {
+    font-family: 'Montserrat', sans-serif;  /* Cambiar la fuente */
+    font-size: 4rem;  /* Cambiar el tamaño de la letra */
+    font-weight: bold;  /* Cambiar el grosor de la letra */
+    color: #000000;  /* Cambiar el color de la letra */
+    text-transform: uppercase;  /* Poner el texto en mayúsculas */
+    letter-spacing: 2px;  /* Ajustar el espaciado entre letras */
+    text-align: center;  /* Centrar el texto */
+    margin-bottom: 20px;  /* Ajustar el margen inferior */
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;  /* Cambiar la fuente */
+
+}
+
+.intro-icon {
+    width: 500px; /* Asegúrate de que sea igual para width y height */
+    height: 500px; 
+    border-radius: 50%; /* Hace el contenedor circular */
+    overflow: hidden; /* Asegúrate de que la imagen no se salga del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid #0A0A34; /* Color y grosor del borde */
+}
+
+.intro-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor circular */
+}
+
+/* Estilos de texto */
+.intro-text {
+    flex: 2;
+    margin-left: 30px; /* Reducir el margen entre la imagen y el texto */
+    text-align: justify; /* Justificar el texto */
+}
+
+.intro-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.intro-text p {
+    font-size: 1.0rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.intro-button {
+    margin-top: 20px;
+}
+
+/* Ajuste del margen superior del body para eliminar espacio blanco */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ejemplo de ajustes adicionales */
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+}
+
+.carousel-indicators button {
+    background-color: #1a1aff;
+}
+
+.carousel-indicators .active {
+    background-color: #ff6700;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Estilos personalizados */
+.objectives-section {
+    background-size: cover;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.objectives-section h2 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.objective-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.objective-icon {
+    font-size: 50px;
+    color: #1a1aff;
+    margin-bottom: 15px;
+}
+
+.objective-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.objective-description {
+    color: #666;
+}
+
+.objective-link {
+    margin-top: 15px;
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    color: #1a1aff;
+}
+
+.limitations-section {
+    background-color: #f6f6f6;
+    padding: 60px 0;
+}
+
+.limitation-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.limitation-card img {
+    width: 100%;
+    height: auto;
+}
+
+.limitation-content {
+    padding: 20px;
+}
+
+.limitation-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.limitation-description {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.limitation-link {
+    font-weight: bold;
+    text-decoration: none;
+    color: #ff6700;
+}
+
+.limitation-link:hover {
+    text-decoration: underline;
+}
+
+.alcances-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.alcances-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.alcances-description {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.alcances-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.alcances-card img {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.alcances-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.alcances-card p {
+    color: #666;
+}
+
+.alcances-image {
+    max-width: 300px;
+    margin: 0 auto 50px auto;
+}
+
+.alcances-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
 
 
 

@@ -7,6 +7,12 @@ let typewriter = new Typewriter(app, {
     delay: 50,  // Retraso entre cada carácter (en milisegundos) para escritura rápida
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const section = document.querySelector('.objectives-section');
+    const backgroundUrl = section.getAttribute('data-background');
+    section.style.backgroundImage = `url(${backgroundUrl})`;
+});
+
 // Definimos la secuencia de acciones para el efecto
 typewriter
     .pauseFor(500) // Espera medio segundo antes de empezar

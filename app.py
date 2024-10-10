@@ -31,6 +31,22 @@ def apply_csp(response):
     )
     return response
 
+# Ruta para la página "About"
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/developers')
+def developers():
+    return render_template('developers.html')
+
+@app.route('/history')
+def history():
+    return render_template('history.html')
+
+@app.route('/related')
+def related():
+    return render_template('related.html')
 
 # Ruta principal
 @app.route('/', methods=['GET', 'POST'])
