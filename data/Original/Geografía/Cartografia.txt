@@ -1,0 +1,62 @@
+¿Qué es la cartografía?
+La cartografía es la rama de la geografía encargada de la representación gráfica de un área geográfica, usualmente en términos bidimensionales y convencionales. Es decir que la cartografía es el arte y la ciencia de hacer, analizar, estudiar y comprender todo tipo de mapas. Por extensión, es también el conjunto de mapas y documentos similares que existen.
+
+La cartografía es una ciencia antigua pero vigente. Intenta satisfacer el deseo del ser humano de representar visualmente la superficie del planeta Tierra, cosa relativamente difícil dado que se trata de un geoide.
+
+Para ello, esta ciencia acude a un sistema de proyecciones que intenta servir de equivalencia entre la esfera y el plano. Así construye un equivalente visual de los contornos de la geografía terrestre, su relieve, sus ángulos, todo sometido a una escala específica y a un criterio previo, que elige qué cosas son importantes de representar y cuáles no.
+
+
+Historia de la cartografía
+La cartografía nació con el deseo del ser humano de explorar y aventurarse, cosa que ocurrió bastante temprano en la historia: el primer mapa de la historia data del 6.000 a. C., y consistía en una pintura mural en Anatolia, en la antigua ciudad de Çatal Hüyük.
+
+Posiblemente la necesidad de hacer mapas obedecía a tanto el establecimiento de rutas comerciales, como la planificación militar de la conquista, ya que en aquel entonces no existían Estados dotados de territorio.
+
+El primer mapamundi, es decir, el primer mapa del mundo entero conocido por la sociedad occidental del siglo II d. C., fue obra del romano Claudio Ptolomeo, obedeciendo tal vez al deseo del orgulloso Imperio Romano de definir sus extensas fronteras.
+
+En cambio, durante el Medioevo la cartografía árabe fue la más desarrollada del mundo, así como la China que data del siglo V. Se estima que unos 1.100 mapamundis sobrevivieron a la Edad Media.
+
+La verdadera explosión de la cartografía en Occidente vino junto a la expansión de los primeros imperios europeos, entre los siglos XV y XVII. Inicialmente, los cartógrafos europeos copiaban los mapas antiguos y los empleaban como base de los propios, hasta que la invención de la brújula, el telescopio y la agrimensura les permitieron aspirar a mayor exactitud.
+
+Así, globo terráqueo más antiguo, esto es, la representación visual del mundo moderno en tres dimensiones más antigua que se conserva, apareció en 1492 y fue obra de Martín Behaim. La incorporación de América (con ese nombre) se produjo en 1507, y el primer mapa con un ecuador graduado surgió en 1527.
+
+A lo largo de este recorrido, los tipos de documentos cartográficos cambiaron bastante en su esencia. Las primeras cartas planas se hacían a mano y se empleaban para la navegación utilizando los astros como referencia.
+
+Pero pronto fueron desplazadas por la aparición de nuevas tecnologías gráficas, como la imprenta y la litografía. En épocas recientes la aparición de la electrónica y la informática cambiaron para siempre el modo de hacer mapas. Actualmente existen sistemas de posicionamiento global y satelital que ofrecen representaciones del planeta mucho más exactas de lo que jamás han podido serlo.
+
+Importancia de la cartografía
+La cartografía es fundamental hoy en día. Es imprescindible para todas las actividades globalizadas, como el comercio internacional y los viajes masivos intercontinentales, ya que requieren una comprensión mínima de dónde están las cosas en el mundo.
+
+Dado que las dimensiones del globo son tan grandes que hacen imposible el contemplarlo en su conjunto, la cartografía es la ciencia que nos permite las mayores aproximaciones posibles.
+
+Ramas de la cartografía
+cartografia tematica tipos
+La cartografía temática analiza sólo algunos aspectos de la geografía.
+La cartografía comprende dos grandes ramas: la cartografía general y la cartografía temática.
+
+Cartografía general. Se ocupa de las representaciones del mundo de carácter amplio, es decir, dirigidas a todo público y para un uso divulgativo. Los mapamundis, los mapas nacionales, son todos obre de esta rama específica.
+Cartografía temática. Esta rama, en cambio, enfoca su representación geográfica a ciertos aspectos, temas o especificaciones puntuales, como pueden ser elementos económicos, agrícolas, militares, etc. Un mapa de la explotación mundial del sorgo, por ejemplo, pertenece a esta rama de la cartografía.
+¿Para qué sirve la cartografía?
+Como dijimos al principio, la cartografía tiene una gran función: la elaboración de representaciones de nuestro planeta, con diversos grados de exactitud, escala y enfoques diferentes. También se ocupa del estudio, el cotejo y la crítica de estos mapas y representaciones, para así poder debatir respecto a sus fortalezas, debilidades, objeciones y posibles mejorías.
+
+Después de todo, no hay nada natural en un mapa: se trata de un objeto de elaboración tecnológica y cultural, una abstracción que los seres humanos hemos desarrollado, un poco a partir del modo en que imaginamos nuestro planeta.
+
+Elementos de la cartografía
+A grandes rasgos, la cartografía basa sus labores de representación en una serie de elementos y conceptos que le permiten organizar con exactitud los distintos contenidos de un mapa conforme a un punto de vista y una escala específicos. Tales elementos cartográficos son:
+
+La escala. Dado que el mundo es inmensamente grande, para representarlo visualmente necesitamos reducir el tamaño de las cosas de manera convencional, para así mantener las proporciones de las cosas. Dependiendo de la escala empleada, las distancias que normalmente se miden en kilómetros pasarán a medirse en centímetros o milímetros, construyendo así un criterio de equivalencia.
+Los paralelos. El globo terráqueo se divide cartográficamente en dos conjuntos de líneas, el primero de los cuales son los paralelos. Si el planeta se divide en dos hemisferios a partir del ecuador, entonces los paralelos son líneas paralelas a ese eje horizontal imaginario, que seccionan el globo en franjas climáticas, a partir de otras dos líneas conocidas como trópicos (de cáncer y de capricornio).
+Los meridianos. El segundo conjunto de líneas que dividen por convención al globo terrestre, los meridianos cruzan los paralelos de manera perpendicular, siendo el meridiano “eje” o central (llamado “meridiano cero” o “meridiano de Greenwich”) el que pasa por el observatorio real de Inglaterra en Greenwich, Londres, y que coincide en teoría con el eje de rotación de la Tierra. A partir de entonces el mundo se divido en dos mitades, demarcadas por un meridiano cada 30°, cortando la esfera terrestre en una serie de gajos.
+Las coordenadas. Cruzando paralelos y meridianos se logra una cuadrícula, y con ella un sistema de coordenadas que permite asignar a cualquier punto terrestre una latitud (determinada por los paralelos) y una longitud (determinada por los meridianos). Aplicando esta teoría es cómo funcionan los sistemas globales de posicionamiento.
+Los símbolos cartográficos. Los mapas poseen su propio lenguaje, que permite identificar los elementos de interés, en base a una convención específica. Así, por ejemplo, se asignan ciertos símbolos a las ciudades, otros a las capitales, otros a los puertos y aeropuertos, etc.
+Ver además: Proyecciones cartográficas
+
+Cartografía digital
+La cartografía digital ofrece grandes cantidades de información y un uso interactivo.
+Desde el surgimiento de la revolución digital a finales del siglo XX, son pocas las ciencias que han escapado a la necesidad de emplear la informática. En este contexto, la cartografía digital es la utilización de representaciones satelitales y digitales en la fabricación de mapas.
+
+Las antiguas técnicas de dibujo e impresión en papel, por ende, resultan hoy materia de coleccionistas y vintage. Incluso los teléfonos celulares más simples poseen hoy en día acceso a Internet y por ende a los mapas digitales. En ellos es posible introducir enormes cantidades de información recuperable y además funcionan de manera interactiva.
+
+Cartografía social
+La cartografía social es un método colectivo y participativo de elaboración de mapas. Intenta romper con las normas y preconcepciones culturales que trae consigo la cartografía tradicional, nacida de acuerdo a criterios subjetivos respecto al centro del mundo, a la importancia de las regiones y a otros criterios políticos semejantes.
+
+Así, la cartografía social nace de la idea de que no hay ejercicio cartográfico desprovisto de comunidad, y que la elaboración de los mapas debe darse del modo más horizontal posible.

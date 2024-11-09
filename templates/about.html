@@ -18,11 +18,11 @@
     <nav>
         <div class="navbar-container">
             <div class="navbar-left">
-                <img src="{{ url_for('static', filename='img/logo2.png') }}" alt="Logo" class="logo">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" class="logo">
             </div>
             <div class="navbar-right">
                 <ul class="nav-links">
-                    <li><a href="{{ url_for('about') }}"></a></li>
+                    <li><a href="{{ url_for('about') }}">Acerca de</a></li>
                     <li><a href="{{ url_for('developers') }}">Desarrolladores</a></li>
                     <li><a href="{{ url_for('history') }}">Antecedentes</a></li>
                     <li><a href="{{ url_for('related') }}">Temas Relacionados</a></li>
@@ -63,7 +63,7 @@
             </div>
         </section>              
 
-        <section class="objective-section" style="background-image: url('{{ url_for('static', filename='img/fondo.jpg') }}');">
+        <section class="objective-section" >
             <div class="container">
                 <div class="row">
                     <div class="col-12">

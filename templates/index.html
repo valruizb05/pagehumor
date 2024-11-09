@@ -16,7 +16,7 @@
     <nav>
         <div class="navbar-container">
             <div class="navbar-left">
-                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" class="logo">
+                <img src="{{ url_for('static', filename='img/logo2.png') }}" alt="Logo" class="logo">
             </div>
             <div class="navbar-right">
                 <ul class="nav-links">
@@ -39,23 +39,23 @@
 
         <section class="courses-section">
             <div class="course-container">
-                <img src="{{ url_for('static', filename='img/img1.png') }}" alt="Curso 1" class="course-img">
+                <img src="{{ url_for('static', filename='img/index1.jpg') }}" alt="Curso 1" class="course-img">
                 <h3>Proceso completo</h3>
                 <form action="/" method="POST">
-                    <button type="submit" class="button">
+                    <button type="submit" name="button" value="1" class="button">
                         <i class="bi bi-arrow-right-circle"></i>
-                        <span>Comenzar</span>
+                        <span>Proceso completo</span>
                     </button>
                 </form>
             </div>
 
             <div class="course-container">
-                <img src="{{ url_for('static', filename='img/img2.png') }}" alt="Curso 2" class="course-img">
+                <img src="{{ url_for('static', filename='img/index2.jpg') }}" alt="Curso 2" class="course-img">
                 <h3>Solo texto humoristíco</h3>
                 <form action="/" method="POST">
-                    <button type="submit" class="button">
+                    <button type="submit" name="button" value="2" class="button">
                         <i class="bi bi-arrow-right-circle"></i>
-                        <span>Comenzar</span>
+                        <span>Solo texto humorístico</span>
                     </button>
                 </form>
             </div>

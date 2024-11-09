@@ -1,35 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elegir Tema</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body>
-    <!-- Navbar -->
-    <nav>
-        <div class="navbar-container">
-            <div class="navbar-left">
-                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
-            </div>
-            <div class="navbar-right">
-                <ul class="nav-links">
-                    <li><a href="#about">Acerca de</a></li>
-                    <li><a href="#developers">Desarrolladores</a></li>
-                    <li><a href="#history">Antecedentes</a></li>
-                    <li><a href="#related">Temas Relacionados</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <h1>¿Qué tema quieres aprender?</h1>
-    <form action="/ask_topic" method="POST">
-        <label for="topic">Tema:</label>
-        <input type="text" id="topic" name="topic" required><br>
-        <!-- Único botón para buscar el tema -->
-        <button type="submit">Buscar tema</button>
-    </form>
+<head>
+    {% include "navbar.html" %}
+</head>
+
+<body>
+    <h2 style="text-align: center; margin-bottom: 30px;">Selecciona una Categoría</h2>
+
+    <!-- Contenedor principal de las categorías -->
+    <div class="category-container">
+        <!-- Caja de Biología -->
+        <div class="category-box">
+            <img src="{{ url_for('static', filename='img/biologia.png') }}" alt="Biología">
+            <h3>Biología</h3>
+            <form action="{{ url_for('ask_topic') }}" method="POST">
+                <input type="hidden" name="category" value="Biologia">
+                <button type="submit" class="btn-bio">Seleccionar</button>
+            </form>
+        </div>
+
+        <!-- Caja de Geografía -->
+        <div class="category-box">
+            <img src="{{ url_for('static', filename='img/geografia.jpg') }}" alt="Geografía">
+            <h3>Geografía</h3>
+            <form action="{{ url_for('ask_topic') }}" method="POST">
+                <input type="hidden" name="category" value="Geografia">
+                <button type="submit" class="btn-geo">Seleccionar</button>
+            </form>
+        </div>
+
+        <!-- Caja de Historia -->
+        <div class="category-box">
+            <img src="{{ url_for('static', filename='img/historia.jpg') }}" alt="Historia">
+            <h3>Historia</h3>
+            <form action="{{ url_for('ask_topic') }}" method="POST">
+                <input type="hidden" name="category" value="Historia">
+                <button type="submit" class="btn-historia">Seleccionar</button>
+            </form>
+        </div>
+    </div>
 </body>
+
 </html>

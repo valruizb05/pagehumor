@@ -1,0 +1,48 @@
+¿Qué es fotosíntesis?
+La fotosíntesis es el proceso bioquímico mediante el cual las plantas, las algas y las bacterias fotosintéticas convierten materia inorgánica (dióxido de carbono y agua) en materia orgánica (azúcares), aprovechando la energía proveniente de la luz solar. Este es el principal mecanismo de nutrición de todos los organismos autótrofos que poseen clorofila, que es el pigmento esencial para el proceso fotosintético.
+
+La fotosíntesis constituye uno de los mecanismos bioquímicos más importantes del planeta ya que implica la fabricación de nutrientes orgánicos que almacenan la energía lumínica proveniente del Sol en distintas moléculas útiles (carbohidratos). De hecho, el nombre de este proceso proviene de las voces griegas foto, “luz”, y synthesis, “composición”.
+
+Después de la fotosíntesis, las moléculas orgánicas sintetizadas pueden ser empleadas como fuente de energía química para sostener procesos vitales, como la respiración celular y otras reacciones que forman parte del metabolismo de los seres vivos.
+
+Para llevar a cabo la fotosíntesis, se requiere de la presencia de clorofila, un pigmento sensible a la luz solar, que les confiere a las plantas y las algas su coloración verde característica. Este pigmento se encuentra en los cloroplastos, organelas celulares de diverso tamaño que son propias de las células vegetales, especialmente las células foliares (de las hojas). Los cloroplastos contienen un conjunto de proteínas y enzimas que permiten el desarrollo de las complejas reacciones que forman parte del proceso fotosintético.
+
+El proceso de fotosíntesis es fundamental para el ecosistema y para la vida tal y como los conocemos, dado que permite la creación y circulación de la materia orgánica y la fijación de materia inorgánica. Además, durante la fotosíntesis oxigénica se produce el oxígeno que necesita la mayor parte de los seres vivos para su respiración.
+
+Tipos de fotosíntesis
+Se pueden distinguir dos tipos de fotosíntesis, en función de las sustancias utilizadas por el organismo para llevar a cabo la reacción:
+
+Fotosíntesis oxigénica. Se caracteriza por la utilización de agua (H2O) para la reducción del dióxido de carbono (CO2) consumido. En este tipo de fotosíntesis, no solo se producen azúcares útiles para el organismo, sino que también se obtiene oxígeno (O2) como producto de la reacción. Las plantas, las algas y las cianobacterias llevan a cabo la fotosíntesis oxigénica.
+Fotosíntesis anoxigénica. El organismo no utiliza agua para la reducción del dióxido de carbono (CO2), sino que aprovecha la luz solar para romper moléculas de sulfuro de hidrógeno (H2S) o hidrógeno gaseoso (H2). Este tipo de fotosíntesis no produce oxígeno (O2) y, en cambio, libera azufre como producto de la reacción. La fotosíntesis anoxigénica es llevada a cabo por las llamadas bacterias verdes y púrpuras del azufre, que contienen pigmentos fotosintéticos agrupados con el nombre de bacterioclorofilas, que son diferentes a la clorofila de las plantas.
+Características de la fotosíntesis
+Cloroplastos - célula vegetal
+En las plantas y algas, la fotosíntesis se lleva a cabo en organelas llamadas cloroplastos.
+A grandes rasgos, la fotosíntesis se caracteriza por lo siguiente:
+
+Es un proceso bioquímico de aprovechamiento de la luz solar para la obtención de compuestos orgánicos, o sea, de síntesis de nutrientes a partir de elementos inorgánicos como el agua (H2O) y el dióxido de carbono (CO2).
+Puede ser realizada por diversos organismos autótrofos, siempre y cuando tengan pigmentos fotosintéticos (el más importante es la clorofila). Es el proceso de nutrición de las plantas (tanto terrestres como acuáticas), las algas, el fitoplancton, las bacterias fotosintéticas. Algunos pocos animales son capaces de realizar fotosíntesis, entre ellos la babosa marina Elysia chlorotica y la salamandra moteada Ambystoma maculatum (esta última lo hace gracias a la simbiosis con un alga).
+En las plantas y las algas, la fotosíntesis se lleva a cabo en organelas especializadas llamadas cloroplastos, en los que se encuentra la clorofila. Las bacterias fotosintéticas también poseen clorofila (u otros pigmentos análogos), pero no tienen cloroplastos.
+Existen dos tipos de fotosíntesis, según la sustancia utilizada para fijar el carbono proveniente del dióxido de carbono (CO2). La fotosíntesis oxigénica utiliza agua (H2O) y produce oxígeno (O2), que es liberado al medio circundante. La fotosíntesis anoxigénica utiliza sulfuro de hidrógeno (H2S) o hidrógeno gaseoso (H2), y no produce oxígeno sino que libera azufre.
+Desde la Antigua Grecia ya se postulaba la relación existente entre la luz solar y las plantas. Sin embargo, los avances en el estudio y la comprensión de la fotosíntesis comenzaron a cobrar importancia gracias a los aportes de un conjunto sucesivo de científicos del siglo XVIII, XIX y XX. Por ejemplo, el primero en demostrar la generación de oxígeno en los vegetales fue el clérigo inglés Joseph Priestley (1732-1804) y el primero en formular la ecuación básica de la fotosíntesis fue el botánico alemán Ferdinand Sachs (1832-1897). Más adelante, el bioquímico norteamericano Melvin Calvin (1911-1997), realizó otro enorme aporte, esclareciendo el ciclo de Calvin (una de las fases de la fotosíntesis), lo que le valió el Premio Nobel de Química en 1961.
+Ecuación de la fotosíntesis
+La ecuación general de la fotosíntesis oxigénica es la siguiente:
+
+La forma correcta de formular esta ecuación químicamente, es decir, la ecuación balanceada de esta reacción, es la siguiente:
+
+Fotosíntesis
+
+Fases de la fotosíntesis
+fotosíntesis
+La etapa fotoquímica de la fotosíntesis se produce en presencia de luz solar.
+La fotosíntesis como proceso químico ocurre en dos etapas diferenciadas: la etapa luminosa (o lumínica) y la etapa oscura, llamadas así porque solo en la primera interviene directamente la presencia de luz solar (lo cual no significa que la segunda ocurra necesariamente en la oscuridad).
+
+Etapa luminosa o fotoquímica. Durante esta fase se dan las reacciones dependientes de la luz en el interior de la planta, es decir, la planta capta la energía solar por medio de la clorofila y la utiliza para producir ATP y NADPH. Todo empieza cuando la molécula de clorofila entra en contacto con la radiación solar y los electrones de sus capas exteriores son excitados, lo que genera una cadena de transporte de electrones (semejante a la electricidad), que es aprovechada para la síntesis de ATP (adenosín trifosfato) y NADPH (nicotín adenín dinucleótido fosfato). La ruptura de una molécula de agua en un proceso llamado “fotólisis” permite que una molécula de clorofila recupere el electrón que perdió al ser excitada (se requiere la excitación de varias moléculas de clorofila para llevar a cabo la fase luminosa). Como resultado de la fotólisis de dos moléculas de agua, se produce una molécula de oxígeno que es liberada a la atmósfera como subproducto de esta fase de la fotosíntesis.
+Etapa oscura o sintética. Durante esta fase, que tiene lugar en la matriz o estroma de los cloroplastos, la planta utiliza dióxido de carbono y aprovecha las moléculas generadas durante la etapa previa (energía química) para sintetizar sustancias orgánicas a través de un circuito de reacciones químicas muy complejas conocido como el Ciclo de Calvin-Benson. Durante este ciclo, y mediante la intervención de diferentes enzimas, el ATP y el NADPH previamente formados, se sintetiza glucosa a partir del dióxido de carbono que la planta toma de la atmósfera. La incorporación del dióxido de carbono en compuestos orgánicos se conoce como fijación del carbono.
+Importancia de la fotosíntesis
+fotosintesis importancia
+La fotosíntesis libera oxígeno en la atmósfera y en el agua.
+La fotosíntesis es un proceso vital y central en la biosfera debido a múltiples razones. La primera y más evidente es que produce oxígeno (O2), un gas indispensable para la respiración tanto en el agua como en el aire. Sin plantas, la mayoría de los seres vivos (incluyendo el ser humano) sencillamente no podrían sobrevivir.
+
+Por otro lado, al absorberlo del medio circundante, las plantas fijan el dióxido de carbono (CO2) convirtiéndolo en materia orgánica. Este gas, que exhalamos al respirar, es potencialmente tóxico si no se mantiene dentro de ciertos límites.
+
+Debido a que las plantas utilizan el dióxido de carbono para fabricar su propio alimento, la disminución de la vida vegetal en el planeta incide en el aumento de este gas en la atmósfera, donde funciona como un agente del calentamiento global. Por ejemplo, el CO2 actúa como un gas de efecto invernadero, impidiendo que el exceso de calor que llega a la Tierra se irradie hacia afuera de la atmósfera. Se estima que cada año los organismos fotosintéticos fijan como sustancias orgánicas alrededor de 100.000 millones de toneladas de carbono.
