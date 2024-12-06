@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% include "navbar.html" %}
+    <title>{{ category }} - {{ text_file.replace('.txt', '').upper() }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"> <!-- Asegúrate de enlazar tu archivo CSS -->
+</head>
+<body>
+    <div class="content-container">
+        <!-- Título de la categoría -->
+        <h2 class="content-title">{{ category }} - {{ text_file.replace('.txt', '').upper() }}</h2>
+        
+        <!-- Contenido del texto -->
+        <div class="content-text">
+            {{ content }}
+        </div>
+
+        <!-- Botón para generar el test -->
+        <form action="{{ url_for('generate_quiz_route') }}" method="POST">
+            <button type="submit" class="back-link" style="margin-top: 20px;">Hacer Test</button>
+        </form>
+        
+        <!-- Contenedor para el cuestionario -->
+        <div id="quiz-container">
+            <!-- Aquí se mostrará el cuestionario generado -->
+        </div>
+
+        <!-- Enlace para volver -->
+        <a href="{{ url_for('show_texts') }}" class="back-link">Volver a la lista de textos</a>
+    </div>
+</body>
+</html>

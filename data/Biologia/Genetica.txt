@@ -1,0 +1,42 @@
+¿Qué es la genética?
+La genética es una rama de la biología que estudia cómo las características y los rasgos físicos se transmiten de una generación a otra. Para comprender esa herencia, examina los genes que se encuentran en las células del organismo y que poseen un código especial denominado ADN (ácido desoxirribonucleico). Este código determina el aspecto físico y las probabilidades de contraer determinadas enfermedades.
+
+Los genes funcionan como unidades de almacenamiento de información y contienen las instrucciones sobre cómo deben funcionar las células para formar las proteínas. Esas proteínas son las que dan lugar a todas las características del individuo. El ADN es una proteína que controla la estructura y el funcionamiento de cada célula y tiene la capacidad de crear copias exactas de sí mismo. El ARN (ácido ribonucleico) es una molécula que cumple la función de mensajero de la información del ADN.
+
+La genética es una ciencia que estudia la transmisión de los caracteres hereditarios de un organismo, y su trayectoria evidencia que se trata de una ciencia de crecimiento exponencial. Sus aportes sobre la evolución de las especies y sobre dar soluciones a problemas congénitos o enfermedades resultan su mayor ventaja a pesar de que algunos experimentos van de la mano de controversias a nivel ético y filosófico, como por ejemplo, la clonación de animales.
+
+Genética humana
+Los genes determinan el crecimiento, el desarrollo y el funcionamiento del organismo.
+La genética humana examina la herencia biológica en los seres humanos a través de las células que son pequeñas unidades vivas que componen los músculos, la piel, la sangre, los nervios, los huesos, los órganos y todo lo que conforma un organismo. Los seres humanos surgen de la unión de dos células, un óvulo y un espermatozoide, que forman una nueva célula llamada “cigoto” que se divide de manera sucesiva hasta formar un bebé con todos sus rasgos y características.
+
+El ser humano tiene unos 30.000 genes que contienen las instrucciones que determinan el crecimiento, el desarrollo y el funcionamiento del organismo. Los genes se encuentran distribuidos en 23 pares de cromosomas (o 46 cromosomas en total) dentro de las células. Los cromosomas son estructuras que contienen ADN y ARN, es decir, que cuentan con una secuencia de información química que determina cómo será la morfología y el funcionamiento del organismo.
+
+Herencia genética
+La herencia genética es la transmisión, a través de la información existente en el núcleo de las células, de las características anatómicas, fisiológicas o de otro tipo, de un ser vivo a sus descendientes. Para conocer la herencia genética no basta el origen de las semejanzas entre los miembros de una misma familia sino que es necesario contemplar la epidemiología genética (enfermedades de los antecesores) y el medio ambiente en el que interactúa un individuo. La transmisión del material genético tiene las siguientes características:
+
+Genotipo. Es el conjunto de toda la información transmisible que contienen los genes.
+Fenotipo. Es cualquier característica visible que presenta un individuo (física o conductual) determinada por la interacción entre el genotipo y el medio ambiente.
+Meiosis. Es una de las formas de división celular propia de las células
+reproductoras, en la que se produce una unión o cigoto de dos células (un óvulo y de un espermatozoide).
+Mitosis. Es la división celular que da como resultado dos nuevas células con la misma cantidad de cromosomas, es decir, misma información genética respectivamente.
+Mutación. Es la variación que se produce en el genotipo de un individuo y puede ser espontánea o inducida por agentes muta genéticos, que tienen lugar en el ADN.
+Tipos de herencia genética
+herencia genética - cromosoma y
+Los hombres solo pueden pasar su cromosoma Y a sus hijos varones.
+Existen diferentes tipos de herencia genética que dependen de las unidades discretas llamadas “genes”. Los seres humanos tenemos 23 pares de cromosomas, un par provenientes de la madre, y otro par, del padre. Los cromosomas son estructuras que contienen a los genes y donde pueden existir diferentes formas del mismo gen lo que se denomina “alelos”.
+
+Por ejemplo, en el gen de color de ojos, un individuo puede heredar un alelo del padre que determina que los ojos son azules y heredar otro diferente de la madre que indique que los ojos son verdes. Por lo tanto, el color de ojos del individuo dependerá de la combinación de alelos de un mismo gen. A partir de este ejemplo, se podrán comprender mejor los diferentes tipos de herencia genética que se desarrollan a continuación.
+
+La herencia dominante-recesiva. Ocurre cuando uno de los alelos domina sobre otro y sus rasgos resultan dominantes.
+La herencia dominante incompleta. Se produce cuando ninguno de los alelos domina obre el otro, por lo que el rasgo en la descendencia es una mezcla de ambos alelos.
+La herencia poli genética. Sucede cuando una característica individual es controlada por dos o más pares de genes y se expresa en forma de pequeñas diferencias. Por ejemplo, la altura.
+La herencia ligada al sexo. Ocurre cuando los alelos se encuentran en los cromosomas sexuales (corresponden al par número 23), que están representados por el signo “XY” en el varón y “XX” en la mujer. Los hombres solo pueden pasar su cromosoma Y a sus hijos varones, por lo que ningún rasgo ligado a X es heredado del padre. A la inversa, ocurre con la madre quien solo pasan su cromosoma X a sus hijas mujeres.
+Variabilidad genética
+Mutación - ADN
+La mutación se produce por cualquier cambio en una secuencia de ADN.
+La variabilidad genética es la modificación de los genes de los individuos de una misma especie que se diferencian según la población en la que habitan. Por ejemplo, los jaguares que habitan en Brasil tienen casi el doble de tamaño que los que habitan en México, a pesar de que pertenecen a la misma especie. Hay dos fuentes principales de variación genética:
+
+La mutación. Se produce por cualquier cambio en una secuencia de ADN, tanto por un error en la replicación del ADN como por radiaciones o sustancias químicas del medio ambiente.
+La combinación de genes. Se genera durante la reproducción de las células y es como ocurren la mayoría de las variaciones hereditarias.
+Manipulación genética
+La manipulación genética, o también llamada “ingeniería genética”, se concentra en el estudio del ADN con el objetivo de lograr su manipulación. Consiste en una serie de métodos de laboratorio que permite modificar las características hereditarias de un organismo para aislar genes o fragmentos de ADN, clonarlos e introducirlos en otros genomas para que se expresen. Por ejemplo, cuando los genes nuevos son introducidos en las plantas o animales, lo organismos resultantes se denominan “transgénicos”.

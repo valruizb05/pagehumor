@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% include "navbar.html" %}
+    <title>Temas en {{ category }}</title>
+</head>
+<body>
+    <h2 style="text-align: center; margin-top: 20px;">Temas en {{ category }}</h2>
+
+    <div class="grid-container">
+        {% for text in texts %}
+        <div class="text-box">
+            <img src="{{ url_for('static', filename='img/topic.png') }}" alt="Imagen del tema">
+            <h3>{{ text.replace('.txt', '') }}</h3>
+
+            <form action="{{ url_for('show_texts') }}" method="POST">
+                <input type="hidden" name="text" value="{{ text }}">
+                <button type="submit" class="button-style 
+                    {% if loop.index % 5 == 1 %}btn-blue
+                    {% elif loop.index % 5 == 2 %}btn-pink
+                    {% elif loop.index % 5 == 3 %}btn-purple
+                    {% elif loop.index % 5 == 4 %}btn-yellow
+                    {% else %}btn-orange{% endif %}">
+                    Ver Texto
+                </button>
+            </form>
+            
+            
+        </div>
+        {% endfor %}
+    </div>
+
+    <div style="text-align: center;">
+        <a href="{{ url_for('ask_topic') }}" class="back-link">Volver a categorías</a>
+    </div>
+</body>
+</html>

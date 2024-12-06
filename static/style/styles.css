@@ -747,12 +747,11 @@ body {
     text-transform: uppercase; /* Convertimos el título a mayúsculas */
 }
 
-/* Estilo del texto */
 .content-text {
     font-size: 18px;
     line-height: 1.6;
     color: #555;
-    white-space: pre-wrap;
+    white-space: pre-wrap; /* Conserva los saltos de línea sin usar <pre> */
     text-align: justify;
 }
 

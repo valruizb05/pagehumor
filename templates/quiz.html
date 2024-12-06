@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="content-container">
+        <h2 class="content-title">Cuestionario</h2>
+
+        <!-- Instrucciones -->
+        <p>Lee las preguntas y selecciona la respuesta correcta para cada una.</p>
+
+        <!-- Formulario para el cuestionario -->
+        <form action="{{ url_for('submit_quiz') }}" method="POST">
+            {% for question_id, question_data in quiz.items() %}
+                <div class="question">
+                    <!-- Muestra la pregunta -->
+                    <p><strong>{{ question_data['pregunta'] }}</strong></p>
+                    
+                    <!-- Opciones de respuesta -->
+                    {% for option in question_data['opciones'] %}
+                        <label>
+                            <input type="radio" name="{{ question_id }}" value="{{ option }}"> {{ option }}
+                        </label><br>
+                    {% endfor %}
+                </div>
+                <hr> <!-- Línea divisoria entre preguntas -->
+            {% endfor %}
+
+            <!-- Botón para enviar el cuestionario -->
+            <button type="submit" class="back-link">Enviar Respuestas</button>
+        </form>
+    </div>
+</body>
+</html>
